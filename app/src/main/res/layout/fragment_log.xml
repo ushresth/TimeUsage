@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include layout="@layout/view_camera_and_title">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/log_title_label"
+        style="?android:listSeparatorTextViewStyle"/>
+
+    <EditText android:id="@+id/log_title"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="@string/log_title_hint"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/log_comment_label"
+        style="?android:listSeparatorTextViewStyle"
+        />
+
+    <EditText android:id="@+id/log_comment"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="@string/log_comment_hint"/>
+    </include>
+
+    <Button
+        android:id="@+id/log_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <TextView
+            android:text="@string/activity_type_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/activity_type_label_id"
+            android:layout_weight="0.63"
+            style="?android:listSeparatorTextViewStyle"/>
+
+        <Spinner
+            android:id="@+id/activity_type_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/activity_type_label_id"
+            android:layout_weight="0.51"/>
+    </LinearLayout>
+
+        <TextView
+            style="?android:listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/activity_duration_label"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"/>
+
+        <EditText
+            android:id="@+id/activity_duration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/activity_duration_hint"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"/>
+
+    <TextView
+        style="?android:listSeparatorTextViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_place_label"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
+
+    <EditText
+        android:id="@+id/activity_place"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/activity_place_hint"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <Button
+            android:id="@+id/log_save_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/log_save_button"
+            android:layout_weight="1"
+            android:onClick="saveButton"/>
+
+        <Button
+            android:id="@+id/log_cancel_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/log_cancel_button"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/log_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/log_delete_button"/>
+</LinearLayout>
